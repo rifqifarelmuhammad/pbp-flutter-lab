@@ -1,16 +1,25 @@
 # counter_7
 
-A new Flutter project.
+## Jawaban dari Pertanyaan Tugas 7
+### 1. Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
+- Stateless widget: Widget yang tidak pernah berubah. Contohnya adalah Icond dan IconButton.
+- Stateful widget: Widget yang dapat berubah-ubah (dinamis), bergantung dengan statenya. Contohnya adalah Checkbox, Form, Radio, dan Slider.
+- Perbedaan: Stateless widget bersifat statis, immutable, dan tidak memiliki state. Sedangkan stateful widget bersifat dinamis, mutable, dan memiliki state.
 
-## Getting Started
+### 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+`Text` untuk tempat menaruh text. `Padding` untuk membuat space kosong pada bagian dan ukuran tertentu. `Row` untuk membuat seluruh elemen childnya sejajar. `Visibility` untuk hide and show child. `FloatingActionButton` untuk menampilkan button yang dapat memberikan action tertentu. `Expanded` untuk meng-expand container (dalam kasus ini adalah row terbawah) agar tampilan terlihat full (kiri hingga kanan).
 
-This project is a starting point for a Flutter application.
+### 3. Apa fungsi dari setState()? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
+setState() digunakan sebagai tanda bahwa terdapat internal state yang berubah sehingga mengakibatkan terjadinya re-build widget tree sehingga tampilan pada widget yang statenya berubah akan ikut berubah juga.
 
-A few resources to get you started if this is your first Flutter project:
+### 4. Jelaskan perbedaan antara const dengan final.
+- Const: Value sudah harus diketahui ketika compile time
+- Final: Value tidak harus diketahui ketika compile time, tetapi sudah harus diketahui saat run time.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Membuat flutter app counter_7 dengan menjalankan perintah `flutter create counter_7`
+2. Menambahkan floatting Action Button baru untuk decrement dan menyesuaikan posisinya menggunakan widget pading, row, dan expanded
+3. Membuat fungsi decrement untuk mengurangi nilai dan meng-assign fungsinya ke button decrement
+4. Mengganti teks beserta warna yang ditampilkan berdasarkan counternya (ganjil atau genap)
+5. Memberikan conditional agar button decrement tidak memiliki pengaruh ketika counter == 0
+6 (Implement bonus) Memberikan conditional agar button decrement tidak terlihat ketika counter == 0
