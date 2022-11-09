@@ -22,4 +22,4 @@ setState() digunakan sebagai tanda bahwa terdapat internal state yang berubah se
 3. Membuat fungsi decrement untuk mengurangi nilai dan meng-assign fungsinya ke button decrement
 4. Mengganti teks beserta warna yang ditampilkan berdasarkan counternya (ganjil atau genap)
 5. Memberikan conditional agar button decrement tidak memiliki pengaruh ketika counter == 0
-6 (Implement bonus) Memberikan conditional agar button decrement tidak terlihat ketika counter == 0
+6. (Implement bonus) Memberikan conditional agar button decrement tidak terlihat ketika counter == 0
