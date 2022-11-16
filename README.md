@@ -23,3 +23,43 @@ setState() digunakan sebagai tanda bahwa terdapat internal state yang berubah se
 4. Mengganti teks beserta warna yang ditampilkan berdasarkan counternya (ganjil atau genap)
 5. Memberikan conditional agar button decrement tidak memiliki pengaruh ketika counter == 0
 6 (Implement bonus) Memberikan conditional agar button decrement tidak terlihat ketika counter == 0
+
+## Jawaban dari Pertanyaan Tugas 8
+### 1. Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
+`Navigator.push` akan menambahkan atau menumpuk suatu page pada stack (menjadi top of stack dari stack). Sedangkan `Navigator.pushReplacement` akan merubah halaman sekarang dengan halaman baru dengan cara menghapus top of stack saat ini, dan kemudian menambahkan page yang dituju ke top of stack.
+
+### 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- `Center`: Menempatkan widget children ke tengah halaman
+- `Column`: Menampilkan widget secara vertikal
+- `Form`: Preparation form (beserta key nya)
+- `Container`: Menampung widget children
+- `Padding`: Membuat space kosong pada bagian dan ukuran tertentu
+- `TextFormField`: Membuat form dengan text field
+- `SizedBox`: Membuat fixed size box
+- `InputDecoration`: Membuat decoration untuk input form
+- `Icon`: Menampilkan icon
+- `OutlineInputBorder`: Membuat outline pada border input form
+- `DropdownButtonFormField`: Membaut dropdown untuk form
+- `Text`: Menampilkan text
+- `TextButton`: Menampilkan button dengan text
+- `Spacer`: Membuat space pada widget sehingga menjadi fleksibel
+- `Align`: Meng-align child widget
+- `SingleChildScrollView`: Menampilkan widget children yang dapat di scroll dalam 1 column
+- `Row`: Membuat seluruh elemen childnya sejajar
+- `Center`: Membuat seluruh elemen childnya ke tengah halaman
+
+### 3. Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+- `onChanged`: Event terjadi ketika terdapat perubahan pada input
+- `onSaved`: Event terjadi ketika user men-save input
+- `onPressed`: Event terjadi ketika user menekan button
+
+### 4. Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Navigator menggunakan prinsip Stack, yaitu First in last out. Ketika ingin berpindah halaman, page yang sedang dilihat akan di pop pada stack, kemudian halaman yang akan dimuat akan di-push pada top of stack. Halaman yang ditampilkan ke user merupakan halaman yang berada pada top of stack.
+
+### 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Membuat drawer pada semua file yang dibutuhkan
+2. Membuat routing pada semua drawer agar dapat mengarah ke halaman yang tepat ketika drawer ditekan
+3. Membuat halaman form beserta elemen inputnya (disesuaikan berdasarkan kebutuhan soal)
+4. Membuat class Budget dan ListBudget sebagai objek & tempat penyimpanan objek.
+5. Menampilkan data yang terdapat pada ListBudget menggunakan bantuan card.
+6. Implement bonus
