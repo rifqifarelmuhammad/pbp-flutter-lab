@@ -63,3 +63,4 @@ Navigator menggunakan prinsip Stack, yaitu First in last out. Ketika ingin berpi
 4. Membuat class Budget dan ListBudget sebagai objek & tempat penyimpanan objek.
 5. Menampilkan data yang terdapat pada ListBudget menggunakan bantuan card.
 6. Implement bonus
+6. (Implement bonus) Memberikan conditional agar button decrement tidak terlihat ketika counter == 0
