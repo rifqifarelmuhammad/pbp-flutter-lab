@@ -64,3 +64,42 @@ Navigator menggunakan prinsip Stack, yaitu First in last out. Ketika ingin berpi
 5. Menampilkan data yang terdapat pada ListBudget menggunakan bantuan card.
 6. Implement bonus
 6. (Implement bonus) Memberikan conditional agar button decrement tidak terlihat ketika counter == 0
+
+## Jawaban dari Pertanyaan Tugas 9
+### 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Bisa. Akan tetapi, dengan cara ini terdapat kemungkinan data yang diambil tidak sesuai dengan apa yang diinginkan. Hal ini dikarenakan pada dasarnya JSON merupakan suatu object notasi JavaScript yang memiliki beberapa lapisan atau field. Oleh karena itu, sebaiknya kita membuat model terlebih dahulu sebelum melakukan pengambilan data JSON agar data yang ingin diambil mempunyai struktur yang baik dan mudah untuk digunakan sehingga dapat meminimalisir kesalahan pengambilan data. Dengan kata lain, membuat model sebelum melakukan pengambilan data lebih baik daripada tidak membuat model terlebih dahulu.
+
+### 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- `FutureBuilder`: Menggenerate array of widget berdasarkan suatu snapshot
+- `Center`: Membuat seluruh elemen childnya ke tengah halaman
+- `Column`: Menampilkan widget secara vertikal
+- `Text`: Menampilkan text
+- `Container`: Menampung widget children
+- `Card`: Membuat card dengan child sebagai isinya
+- `RoundedRectangleBorder`: Membuat sisi bordedr menjadi sedikit membulat (tidak lancip)
+- `ListTile`: Membuat row yang menampung teks sebagai leading dan trailing
+-  `Checkbox`: Membuat sebuah checkbox
+- `MaterialPageRoute`: Membuat sebuah route baru sehingga halaman yang ditampilkan akan berubah
+- `SizedBox`: Membuat fixed size box
+- `Row`: Membuat seluruh elemen childnya sejajar
+- `Align`: Meng-align child widget
+- `Flexible`: Membuat text menjadi tidak overflow (menyesuaikan ukuran tempat)
+- `Spacer`: Membuat space pada widget sehingga menjadi fleksibel
+- `Padding`: Membuat space kosong pada bagian dan ukuran tertentu
+- `ElevatedButton`: Membuat button yang memiliki animasi "sedikit menaik" ketika ditekan
+
+### 3. Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+- Menambahkan depedensi `http`
+- Membuat function http request dengan method `GET` secara async untuk mengambil data dari suatu url. Pada function ini terdapat `jsonDecode()` untuk mengubah response menjadi json
+- Membuat model sesuai dengan data yang ingin diambil
+- Melakukan HTTP request dengan method GET, lalu response JSON akan dikonversi ke dalam model yang telah dibuat
+- Menampilkan data menggunakan `FutureBuilder`
+
+### 4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Menambahkan halaman mywatchlist pada drawer untuk menambahkan tombol navigasi pada drawer
+2. Melakukan persiapan untuk fetch data JSON, seperti menambahkan depedency & permission internet pada android
+3. Membuat model mywatchlist dan fetch data json dari tugas 3
+4. Membuat halaman utama yang menampilkan judul watchlist dalam bentuk card. Judul watchlist didapatkan dengan memanfaatkan function util fetch data yang telah dibuat sebelumnya
+5. Membuat halaman detail watchlist, serta menambahkan navigator.push pada card watchlist yang akan mengarahkan ke halaman berisi detail informasi dari watchlist yang ditekan
+6. Detail watchlist akan ditampilkan pada halaman detail watchlist
+7. Implement bonus

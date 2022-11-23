@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/form.dart';
+import 'package:counter_7/page/Form/form.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/show_list_budget.dart';
+import 'package:counter_7/page/budget/show_list_budget.dart';
+import 'package:counter_7/page/myWatchlist/myWatchlist.dart';
 
 Drawer buildDrawer(BuildContext context) {
   return Drawer(
     child: Column(
       children: [
-        // Menambahkan clickable menu
         ListTile(
           title: const Text('counter_7'),
           onTap: () {
@@ -32,6 +32,15 @@ Drawer buildDrawer(BuildContext context) {
             Navigator.pushReplacement(
               context, 
               MaterialPageRoute(builder: (context) => const ShowBudgetPage())
+            );
+          },
+        ),
+        ListTile(
+          title: const Text('My Watch List'),
+          onTap: () {
+            Navigator.pushReplacement(
+              context, 
+              MaterialPageRoute(builder: (context) => const MyWatchlistPage())
             );
           },
         ),
